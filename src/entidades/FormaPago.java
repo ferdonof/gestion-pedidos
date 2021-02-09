@@ -37,6 +37,8 @@ public abstract class FormaPago {
 
 	public void pagar(Date fecha, Double monto) {
 		pagosRealizados.add(fecha);
+		System.out.println("Se guardó el pago de $ "+monto+ " el dia "+fecha);
+		
 	}
 
 	
