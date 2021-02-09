@@ -1,6 +1,7 @@
 package entidades;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListaPrecios {
@@ -38,5 +39,20 @@ public class ListaPrecios {
 		this.proveedor = proveedor;
 	}
 
+	public void agregarProducto(Producto prod) {
+		this.listaProductos.add(prod);
+	}
+
+	public void verListaVenta() {
+		System.out.println("Lista de precios de "+proveedor);
+		for (Producto producto : listaProductos) {
+			System.out.println(
+					String.format("Cod Producto: %s.................Nombre: %s .............Precio $ %s", 
+					producto.getCodigo(), 
+					producto.getNombre(), 
+					producto.getPrecioVenta()));			
+		}
+		
+	}
 
 }
